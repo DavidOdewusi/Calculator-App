@@ -1,0 +1,60 @@
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s;
+
+  &__logo {
+    font-size: 3rem;
+  }
+
+  &__toogle {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    font-size: 1rem;
+    word-spacing: 2;
+
+    @include respond(phone) {
+      width: 30%;
+      font-size: 1.2rem;
+    }
+
+    &-text {
+      text-transform: uppercase;
+      align-self: flex-end;
+      transition: all 0.3s;
+    }
+
+    &-box {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      transition: all 0.3s;
+
+      &-label {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.3rem;
+      }
+
+      &-btn {
+        display: flex;
+        flex-direction: column;
+        background-color: $color-primary-dark;
+        border-radius: 1rem;
+        padding: 0.3rem;
+        transition: all 0.3s;
+      }
+
+      &-circle {
+        display: block;
+        height: 1rem;
+        width: 1rem;
+        background-color: $color-secondary;
+        border-radius: 50%;
+        transition: all 0.3s;
+      }
+    }
+  }
+}

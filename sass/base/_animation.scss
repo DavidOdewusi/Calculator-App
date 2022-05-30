@@ -1,0 +1,9 @@
+@keyframes slideright {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}

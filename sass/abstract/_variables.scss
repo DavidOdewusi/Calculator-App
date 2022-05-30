@@ -1,0 +1,54 @@
+//////////////
+/// Colors ///
+//////////////
+// General
+$color-white: hsl(0, 0, 100%);
+$color-gray: hsl(30, 25%, 89%);
+$color-gray-dark: hsl(28, 16%, 65%);
+$color-gray-light: hsl(0, 0%, 90%);
+$color-gray-lighter: hsl(0, 0%, 93%);
+$color-red-gray: hsl(0, 5%, 81%);
+$color-yellow-gray: hsl(45, 7%, 89%);
+$color-orange-gray: hsl(35, 11%, 61%);
+
+// Theme 1
+$color-primary: hsl(222, 26%, 31%);
+$color-primary-dark: hsl(223, 31%, 20%);
+$color-primary-darker: hsl(224, 36%, 15%);
+$color-primary-light: hsl(224, 28%, 35%);
+$color-primary-lighter: hsl(225, 21%, 49%);
+$color-secondary: hsl(6, 63%, 50%);
+$color-secondary-dark: hsl(6, 70%, 34%);
+$text-color: hsl(221, 14%, 31%);
+
+// Theme 2
+$color-primary-2: hsl(185, 42%, 37%);
+$color-primary-dark-2: hsl(185, 58%, 25%);
+$color-secondary-2: hsl(25, 98%, 40%);
+$color-secondary-dark-2: hsl(25, 99%, 27%);
+$text-color-2: hsl(60, 10%, 19%);
+
+// Theme 3
+$color-primary-3: hsl(268, 71%, 12%);
+$color-primary-dark-3: hsl(268, 75%, 9%);
+$color-primary-dark-3: hsl(268, 47%, 21%);
+$color-secondary-3: hsl(281, 89%, 26%);
+$color-secondary-light-3: hsl(285, 91%, 52%);
+$color-secondary-dark-3: hsl(290, 70%, 36%);
+$color-tertiary-3: hsl(177, 92%, 70%);
+$color-tertiary-dark-3: hsl(176, 100%, 44%);
+$text-color-3: hsl(52, 100%, 62%);
+$text-color2-3: hsl(198, 20%, 13%);
+
+//////////////
+/// Fonts ///
+////////////
+
+$font-display: "League Spartan", sans-serif;
+
+///////////////
+/// Shadow ///
+/////////////
+$shadow-noblur-1: 0 2px $color-gray-dark;
+$shadow-noblur-2: 0 2px $color-primary-light;
+$shadow-noblur-3: 0 2px $color-secondary-dark;

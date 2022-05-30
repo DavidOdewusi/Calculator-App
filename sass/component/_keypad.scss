@@ -1,0 +1,79 @@
+.keypad {
+  background-color: $color-primary-dark;
+  padding: 2.5rem;
+  border-radius: 0.8rem;
+  place-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(6rem, 1fr));
+  gap: 1.2rem;
+  transition: all .3s;
+
+  @include respond(phone) {
+    grid-template-columns: repeat(4, minmax(4rem, 1fr));
+  }
+
+  &__key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 3rem;
+    padding: 0.8rem 2.5rem;
+    color: $text-color;
+    box-shadow: $shadow-noblur-1;
+    background-color: $color-gray;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: all .3s;
+
+    @include respond(phone) {
+      padding: 1.2rem 1rem;
+    }
+
+    &clear,
+    &reset {
+      height: 100%;
+      font-size: 2rem;
+      text-transform: uppercase;
+      background-color: $color-primary-lighter;
+      color: $color-white;
+      box-shadow: $shadow-noblur-2;
+    }
+
+    &equal {
+      background-color: $color-secondary;
+      color: $color-white;
+      box-shadow: $shadow-noblur-3;
+    }
+
+    &7,
+    &4,
+    &1,
+    &dot {
+      grid-column: 1/2;
+    }
+    &8,
+    &5,
+    &2,
+    &0 {
+      grid-column: 2/3;
+    }
+    &9,
+    &6,
+    &3,
+    &slash {
+      grid-column: 3/4;
+    }
+    &clear,
+    &plus,
+    &minus,
+    &x {
+      grid-column: 4/5;
+    }
+
+    &reset,
+    &equal {
+      grid-column: span 2;
+    }
+  }
+}

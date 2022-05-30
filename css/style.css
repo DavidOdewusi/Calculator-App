@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+body {
+  background-color: #3a4764;
+  color: white;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  grid-template-columns: minmax(3rem, 1fr) 80% minmax(3rem, 1fr);
+  grid-template-rows: 90% 10%;
+  transition: all .3s; }
+
+.container {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  width: 40%; }
+  @media screen and (max-width: 1060px) {
+    .container {
+      width: 37rem; } }
+  @media screen and (max-width: 376px) {
+    .container {
+      width: 110%; } }
+
+.attribution {
+  grid-column: 2/3;
+  font-size: 11px;
+  text-align: center; }
+  .attribution__link {
+    color: #3e52a3; }
+
+.mb-small {
+  margin-bottom: 2rem; }
+
+@keyframes slideright {
+  0% {
+    transform: translateX(-100%); }
+  100% {
+    transform: translate(0); } }
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s; }
+  .head__logo {
+    font-size: 3rem; }
+  .head__toogle {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    font-size: 1rem;
+    word-spacing: 2; }
+    @media screen and (max-width: 376px) {
+      .head__toogle {
+        width: 30%;
+        font-size: 1.2rem; } }
+    .head__toogle-text {
+      text-transform: uppercase;
+      align-self: flex-end;
+      transition: all 0.3s; }
+    .head__toogle-box {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      transition: all 0.3s; }
+      .head__toogle-box-label {
+        display: flex;
+        justify-content: space-between;
+        padding: 0.3rem; }
+      .head__toogle-box-btn {
+        display: flex;
+        flex-direction: column;
+        background-color: #232c43;
+        border-radius: 1rem;
+        padding: 0.3rem;
+        transition: all 0.3s; }
+      .head__toogle-box-circle {
+        display: block;
+        height: 1rem;
+        width: 1rem;
+        background-color: #d03f2f;
+        border-radius: 50%;
+        transition: all 0.3s; }
+
+.keypad {
+  background-color: #232c43;
+  padding: 2.5rem;
+  border-radius: 0.8rem;
+  place-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(6rem, 1fr));
+  gap: 1.2rem;
+  transition: all .3s; }
+  @media screen and (max-width: 376px) {
+    .keypad {
+      grid-template-columns: repeat(4, minmax(4rem, 1fr)); } }
+  .keypad__key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 3rem;
+    padding: 0.8rem 2.5rem;
+    color: #444b5a;
+    box-shadow: 0 2px #b4a597;
+    background-color: #eae3dc;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: all .3s; }
+    @media screen and (max-width: 376px) {
+      .keypad__key {
+        padding: 1.2rem 1rem; } }
+    .keypad__keyclear, .keypad__keyreset {
+      height: 100%;
+      font-size: 2rem;
+      text-transform: uppercase;
+      background-color: #637097;
+      color: white;
+      box-shadow: 0 2px #404e72; }
+    .keypad__keyequal {
+      background-color: #d03f2f;
+      color: white;
+      box-shadow: 0 2px #93261a; }
+    .keypad__key7, .keypad__key4, .keypad__key1, .keypad__keydot {
+      grid-column: 1/2; }
+    .keypad__key8, .keypad__key5, .keypad__key2, .keypad__key0 {
+      grid-column: 2/3; }
+    .keypad__key9, .keypad__key6, .keypad__key3, .keypad__keyslash {
+      grid-column: 3/4; }
+    .keypad__keyclear, .keypad__keyplus, .keypad__keyminus, .keypad__keyx {
+      grid-column: 4/5; }
+    .keypad__keyreset, .keypad__keyequal {
+      grid-column: span 2; }
+
+.screen {
+  background-color: #182034;
+  font-size: 5rem;
+  padding: 2rem;
+  color: inherit;
+  text-align: right;
+  border-radius: 0.5rem;
+  border: none;
+  transition: all 0.3s; }
