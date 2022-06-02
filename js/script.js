@@ -179,87 +179,91 @@ function calculator() {
   }
   reset();
 
+  function storeLeftOprd() {
+    keyprArr = [];
+    leftOper = Number(screen.textContent);
+    console.log(leftOper);
+  }
+
+  function storeRightOprd() {
+    rightOper = Number(screen.textContent);
+    console.log(rightOper);
+    keyprArr = [];
+  }
+
   function plus() {
     for (const x of key) {
       if (x.className.includes("keypad__keyplus")) {
         x.addEventListener("click", () => {
-          keyprArr = [];
-          leftOper = Number(screen.textContent);
-          console.log(leftOper);
-          //   operator = "+";
-          //   if (operator === "+") {
-          //   }
-        });
-      }
-
-      if (keyprArr.length === 0 && !x.className.includes("non-operand")) {
-        x.addEventListener("click", () => {
-          console.log(keyprArr);
-          rightOper = Number(screen.textContent);
-          console.log(rightOper);
+          storeLeftOprd();
+          operator = "+";
         });
       }
     }
-    // operator = "";
   }
   plus();
 
+  function minus() {
+    for (const x of key) {
+      if (x.className.includes("keypad__keyminus")) {
+        x.addEventListener("click", () => {
+          storeLeftOprd();
+          operator = "-";
+        });
+      }
+    }
+  }
+  minus();
+
+  function divide() {
+    for (const x of key) {
+      if (x.className.includes("keypad__keyslash")) {
+        x.addEventListener("click", () => {
+          storeLeftOprd();
+          operator = "/";
+        });
+      }
+    }
+  }
+  divide();
+
+  function multiply() {
+    for (const x of key) {
+      if (x.className.includes("keypad__keyx")) {
+        x.addEventListener("click", () => {
+          storeLeftOprd();
+          operator = "*";
+        });
+      }
+    }
+  }
+  multiply();
+
   function equal() {
-    key[17].addEventListener("click", () => {
-      result = leftOper + rightOper;
-      console.log(result);
-      screen.textContent = result;
-      keyprArr = [];
+    key[17].addEventListener("click", (e) => {
+      if (operator === "+") {
+        storeRightOprd();
+        result = leftOper + rightOper;
+        screen.textContent = result;
+        console.log(result);
+      } else if (operator === "-") {
+        storeRightOprd();
+        result = leftOper - rightOper;
+        screen.textContent = result;
+        console.log(result);
+      } else if (operator === "/") {
+        storeRightOprd();
+        result = leftOper / rightOper;
+        screen.textContent = result;
+        console.log(result);
+      } else if (operator === "*") {
+        storeRightOprd();
+        result = leftOper * rightOper;
+        screen.textContent = result;
+        console.log(result);
+      }
     });
   }
-
-  //   function minus() {
-  //     for (const x of key) {
-  //       if (x.className.includes("keypad__keyminus")) {
-  //         x.addEventListener("click", () => {
-  //           keyprArr = [];
-  //           leftOper = Number(screen.textContent);
-  //           console.log(leftOper);
-  //           //   operator = "-";
-  //           //   if (operator === "-") {
-  //           key[17].addEventListener("click", () => {
-  //             rightOper = Number(screen.textContent);
-  //             console.log(rightOper);
-  //             result = leftOper - rightOper;
-  //             console.log(result);
-  //             screen.textContent = result;
-  //             keyprArr = [];
-  //             result = 0;
-  //           });
-  //           //   }
-  //         });
-  //       }
-  //     }
-  //     operator = "";
-  //   }
-  //   minus();
-
-  //   function divide() {
-  //     for (const x of key) {
-  //       if (x.className.includes("keypad__keyslash")) {
-  //         x.addEventListener("click", () => {
-  //           keyprArr = [];
-  //           leftOper = Number(screen.textContent);
-  //           console.log(leftOper);
-  //           //   operator = Number('+');
-  //         });
-  //       }
-  //     }
-
-  //     key[17].addEventListener("click", () => {
-  //       rightOper = Number(screen.textContent);
-  //       console.log(rightOper);
-  //       result = leftOper / rightOper;
-  //       console.log(result);
-  //       screen.textContent = result;
-  //       keyprArr = [];
-  //     });
-  //   }
-  //   divide();
+  equal();
 }
 calculator();
